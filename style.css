@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+  height: 100%;
+}
+body {
+  background-image:url(st.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content:space-between;*/
+  gap: 12px;
+  align-items: center;
+
+  background-image: url(har.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10px 30px;
+  border: 2px solid white;
+  min-height: 80px;
+  height: auto;
+
+  text-shadow: 
+    0 0 6px #2b5cff,
+    0 0 12px #2b5cff,
+    0 0 18px #2b5cff;
+}
+.menu{
+  display: flex;
+  flex: 1;
+  min-width: 280px;
+  gap: 12px;
+}
+a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+.inputs , .Add-todo-list {
+  width: 80px;
+  height: 20px;
+}
+.menu, .inputs {
+  flex: 1 1 140px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu a, .menu button {
+  white-space: nowrap;
+}
+.logo{
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-family: Princess Sofia;
+  font-weight: bold;
+  font-size: 22px;
+  color: #F5F5F5;
+
+  text-shadow: 
+    0 0 6px #2b5cff,
+    0 0 12px #2b5cff,
+    0 0 18px #2b5cff;
+}
+table {
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+table {
+  font-family: Roboto, Arial;
+  background-color: #F5F5F5;
+  border: 2px solid black;
+  width: 500px;
+}
+td, th {
+  border-left: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
