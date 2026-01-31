@@ -153,12 +153,14 @@ td, th {
   .top-bar {
     flex-direction: column;
     align-items: stretch;
-    padding: 12px 14px;
+    padding: 14px 14px;
+    gap: 12px;
   }
 
   .logo {
     align-items: center;
     text-align: center;
+    font-size: 28px;
   }
 
   .menu {
@@ -169,13 +171,23 @@ td, th {
   }
 
   .menu a {
+    font-size: 18px;
+    padding: 14px;
     text-align: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.35);
   }
 
   .inputs,
   .Add-todo-list {
     width: 100%;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .Add-todo-list {
+    font-weight: 700;
   }
 
   table {
@@ -186,3 +198,4 @@ td, th {
     margin-top: 120px;
   }
 }
+
