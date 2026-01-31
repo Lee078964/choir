@@ -15,7 +15,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 0;
 }
 .top-bar {
   display: flex;
@@ -27,10 +26,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
   padding: 12px 24px;
   border: 2px solid white;
   min-height: 80px;
-  height: auto;
 
   text-shadow: 
     0 0 6px #2b5cff,
@@ -57,12 +56,13 @@ a {
 .inputs {
   width: 170px;
   height: 34px;
-  padding: 0 10px;
-  border-radius: 8px;
+  padding: 0 12px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(0, 0, 0, 0.25);
   color: white;
   outline: none;
+  font-size: 16px;
 }
 
 .inputs::placeholder {
@@ -70,18 +70,20 @@ a {
 }
 
 .Add-todo-list {
-  height: 34px;
-  padding: 0 14px;
-  border-radius: 8px;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(0, 0, 0, 0.35);
   color: white;
   cursor: pointer;
   white-space: nowrap;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .Add-todo-list:hover {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .menu, .inputs {
@@ -94,7 +96,7 @@ a {
   color: white;
   text-decoration: none;
   padding: 10px 12px;
-  border-radius: 8px;
+  border-radius: 10px;
   white-space: nowrap;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -110,10 +112,7 @@ a {
   font-size: 22px;
   color: #F5F5F5;
 
-  text-shadow: 
-    0 0 6px #2b5cff,
-    0 0 12px #2b5cff,
-    0 0 18px #2b5cff;
+  
 }
 
 table {
@@ -127,7 +126,8 @@ table {
 td, th {
   border-left: 1px solid black;
   text-align: left;
-  padding: 8px;
+  padding: 10px;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -140,7 +140,7 @@ td, th {
   }
 
   .inputs {
-    width: 200px;
+    width: 220px;
   }
 
   table {
@@ -150,17 +150,24 @@ td, th {
 }
 
 @media (max-width: 480px) {
+  body {
+    font-size: 18px;
+  }
+
   .top-bar {
     flex-direction: column;
     align-items: stretch;
-    padding: 14px 14px;
+    padding: 14px;
     gap: 12px;
+
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.60);
   }
 
   .logo {
     align-items: center;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .menu {
@@ -171,19 +178,20 @@ td, th {
   }
 
   .menu a {
-    font-size: 18px;
-    padding: 14px;
+    font-size: 20px;
+    padding: 16px;
     text-align: center;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
   }
 
   .inputs,
   .Add-todo-list {
     width: 100%;
-    height: 42px;
-    font-size: 16px;
+    height: 48px;
+    font-size: 18px;
+    border-radius: 12px;
   }
 
   .Add-todo-list {
@@ -191,11 +199,36 @@ td, th {
   }
 
   table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 100%;
-    margin-top: 120px;
+    width: 92vw;
+    margin: 110px auto 40px;
+    border: none;
+    background: transparent;
   }
-}
 
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    display: block;
+    background: rgba(255, 255, 255, 0.96);
+    margin-bottom: 14px;
+    border-radius: 14px;
+    padding: 12px 14px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border: none;
+    padding: 8px 0;
+    font-size: 18px;
+  }
+
+  tbody td:nth-child(1)::before {content: "No"; font-weight: 800;}
+  tbody td:nth-child(2)::before {content: "Song"; font-weight: 800;}
+  tbody td:nth-child(3)::before {content: "Note"; font-weight: 800;}
+  tbody td:nth-child(4)::before {content: "Action"; font-weight: 800;}
+}
